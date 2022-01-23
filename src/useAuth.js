@@ -6,9 +6,11 @@ export default function useAuth(code) {
 	const [refreshToken, setRefreshToken] = useState();
 	const [expiresIn, setExpiresIn] = useState();
 
+	const BASE_URL = "https://thinking-spotify-server-v1.herokuapp.com";
+
 	useEffect(() => {
 		axios
-			.post("http://localhost:3001/login", {
+			.post(`${BASE_URL}/login`, {
 				code,
 			})
 			.then((res) => {
@@ -18,7 +20,8 @@ export default function useAuth(code) {
 
 				window.history.pushState({}, null, "/");
 			})
-			.catch(() => {
+			.catch((err) => {
+				console.log(err);
 				window.location = "/";
 			});
 	}, [code]);
@@ -28,7 +31,7 @@ export default function useAuth(code) {
 
 		const timeout = setInterval(() => {
 			axios
-				.post("http://localhost:3001/refresh", {
+				.post(`${BASE_URL}/refresh`, {
 					refreshToken,
 				})
 				.then((res) => {

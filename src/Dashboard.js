@@ -10,6 +10,8 @@ const spotifyWebApi = new SpotifyWebApi({
 	clientId: "60edc3391b794b7aa3fe52f5a8ef6511",
 });
 
+const BASE_URL = "https://thinking-spotify-server-v1.herokuapp.com";
+
 export default function Dashboard({ code }) {
 	const accessToken = useAuth(code);
 
@@ -30,7 +32,7 @@ export default function Dashboard({ code }) {
 	useEffect(() => {
 		if (!playingTrack) return;
 		axios
-			.get("http://localhost:3001/lyrics", {
+			.get(`${BASE_URL}/lyrics`, {
 				params: {
 					track: playingTrack.title,
 					artist: playingTrack.artist,
