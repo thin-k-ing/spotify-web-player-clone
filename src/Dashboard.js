@@ -4,8 +4,12 @@ import { Container, Form } from "react-bootstrap";
 import SpotifyWebApi from "spotify-web-api-node";
 import TrackSearchResult from "./TrackSearchResult";
 import Player from "./Player";
-import { CLIENT } from "./App";
 import axios from "axios";
+
+const CLIENT = {
+	id: "7786349b54a845f0b0fc0b78de8a3ba9",
+	secret: "cba2a2184f6f40c994774f6fd4906147",
+};
 
 const spotifyWebApi = new SpotifyWebApi({
 	clientId: CLIENT.id,
