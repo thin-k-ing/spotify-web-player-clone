@@ -4,10 +4,11 @@ import { Container, Form } from "react-bootstrap";
 import SpotifyWebApi from "spotify-web-api-node";
 import TrackSearchResult from "./TrackSearchResult";
 import Player from "./Player";
+import { CLIENT } from "./App";
 import axios from "axios";
 
 const spotifyWebApi = new SpotifyWebApi({
-	clientId: "60edc3391b794b7aa3fe52f5a8ef6511",
+	clientId: CLIENT.id,
 });
 
 const BASE_URL = "https://thinking-spotify-server-v1.herokuapp.com";
