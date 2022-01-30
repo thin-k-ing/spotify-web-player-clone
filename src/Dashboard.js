@@ -5,7 +5,6 @@ import SpotifyWebApi from "spotify-web-api-node";
 import TrackSearchResult from "./TrackSearchResult";
 import Player from "./Player";
 import axios from "axios";
-import "./styles.css";
 
 const CLIENT = {
 	id: "7786349b54a845f0b0fc0b78de8a3ba9",
