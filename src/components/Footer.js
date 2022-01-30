@@ -15,7 +15,9 @@ const Footer = () => {
 			</div>
 
 			<div className="last">
-				<p>India (English)</p>
+				<p>
+					<i class="fas fa-globe-asia"></i> India (English)
+				</p>
 				<p>© 2022 Spotify</p>
 			</div>
 		</div>

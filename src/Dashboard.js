@@ -5,6 +5,7 @@ import SpotifyWebApi from "spotify-web-api-node";
 import TrackSearchResult from "./TrackSearchResult";
 import Player from "./Player";
 import axios from "axios";
+import "./styles.css";
 
 const CLIENT = {
 	id: "7786349b54a845f0b0fc0b78de8a3ba9",
@@ -85,9 +86,14 @@ export default function Dashboard({ code }) {
 
 	return (
 		<Container
-			className="d-flex flex-column py-2"
+			className="d-flex flex-column py-2 header"
 			style={{ height: "100vh" }}
 		>
+			<div className="headerItem">
+				<h2>
+					<i class="fab fa-spotify fa-lg"></i> Spotify
+				</h2>
+			</div>
 			<Form.Control
 				type="search"
 				placeholder="Search Songs/Artists"

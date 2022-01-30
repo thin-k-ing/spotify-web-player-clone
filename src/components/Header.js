@@ -22,7 +22,6 @@ const Header = (props) => {
 				>
 					Premium
 				</a>
-				<p style={{ fontWeight: "normal" }}>|</p>
 				<a href={AUTH_URL} className="navItem">
 					Log in
 				</a>
