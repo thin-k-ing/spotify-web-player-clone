@@ -6,8 +6,12 @@ const Footer = () => {
 			</h3>
 
 			<div className="links">
-				<a href="#">About</a>
-				<a href="#">Contact</a>
+				<a href="https://www.spotify.com/in-en/about-us/contact/">
+					About
+				</a>
+				<a href="https://www.spotify.com/in-en/about-us/contact/">
+					Contact
+				</a>
 			</div>
 
 			<div className="last">
