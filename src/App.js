@@ -1,6 +1,6 @@
-import Login from "./Login";
 import Dashboard from "./Dashboard";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Homepage from "./Homepage";
 
 export const CLIENT = {
 	id: "7786349b54a845f0b0fc0b78de8a3ba9",
@@ -10,7 +10,7 @@ export const CLIENT = {
 const code = new URLSearchParams(window.location.search).get("code");
 
 function App() {
-	return code ? <Dashboard code={code} /> : <Login />;
+	return code ? <Dashboard code={code} /> : <Homepage />;
 }
 
 export default App;
